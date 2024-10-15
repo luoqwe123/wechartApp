@@ -1,0 +1,9 @@
+<!--components/articleList/index.wxml-->
+<view class="articleList-container">
+  <image src="/images/two.jpg" mode="" class="cover"/>
+  <view class="article">
+    <view class="title">{{title}}</view>
+    <view class="content">{{content}}</view>
+  </view>
+
+</view>

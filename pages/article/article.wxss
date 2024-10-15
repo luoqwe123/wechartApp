@@ -1,0 +1,9 @@
+/* pages/article/article.wxss */
+
+.article-container{
+  height: 100vh;
+  width: 100%;
+}
+.articleItem{
+  margin-bottom: 10px;
+}
