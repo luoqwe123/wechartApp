@@ -1,18 +1,29 @@
-// pages/logs/logs.js
+// pages/article/article.js
+const request = require('../../utils/request')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    articleList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-
+  async onLoad(options) {
+    try{
+      let res = await request.request('article',{page:1,row:6},'GET')
+      console.log(res)
+      this.setData({
+        articleList:res.data
+      })
+      console.log(this.data.articleList[0])
+    }catch(err){
+      console.log(err)
+    }
+   
   },
 
   /**

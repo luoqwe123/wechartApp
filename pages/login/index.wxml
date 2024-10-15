@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="container">
+    <view class="userinfo">
+      <block wx:if="{{canIUseNicknameComp && !hasUserInfo}}">
+        <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+          <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+        </button>
+        <view class="username-wrapper">
+          <text class="username-label">账号</text>
+          <input type="username" class="username-input" placeholder="请输入账号" bindinput="onInputChange" id="username"/>
+        </view>
+        <view class="password-wrapper">
+          <text class="password-label">密码</text>
+          <input type="password" class="password-input" placeholder="请输入密码" bindinput="onInputChange" id="password"/>
+        </view>
+        <button class="login" bind:tap="login">登录</button>
+      </block>
+      <block wx:elif="{{!hasUserInfo}}">
+        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+        <view wx:else> 请使用2.10.4及以上版本基础库 </view>
+      </block>
+      <block wx:else>
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+    <view class="usermotto">
+      <text class="user-motto">{{motto}}</text>
+    </view>
+  </view>
+</scroll-view>

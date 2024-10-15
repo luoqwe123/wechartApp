@@ -24,5 +24,13 @@
     "tabIndent": "auto",
     "tabSize": 2
   },
-  "appid": "wxe986b1e27021bfd1"
+  "appid": "wxe986b1e27021bfd1",
+  "network": {
+    "request": {
+      "domain": [
+        "http://localhost:3000/api/login"
+      ],
+      "timeout": 60000
+    }
+  }
 }
