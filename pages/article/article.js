@@ -14,7 +14,7 @@ Page({
    */
   async onLoad(options) {
     try{
-      let res = await request.request('article',{page:1,row:6},'GET')
+      let res = await request.request('article',{page:1,row:4},'GET')
       console.log(res)
       this.setData({
         articleList:res.data

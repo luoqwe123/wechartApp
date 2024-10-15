@@ -1,2 +1,7 @@
 <!--pages/article/article.wxml-->
-<text>{{articleList[0].title}}</text>
+<view class="article-container">
+  <view class="articleItem" wx:for="{{articleList}}"> 
+    <Article  title="{{item.title}}" content="{{item.content}}"></Article>
+  </view>
+
+</view>

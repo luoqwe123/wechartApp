@@ -1,1 +1,38 @@
 /* components/articleList/index.wxss */
+.articleList-container{
+  padding: 0px 7px;
+  width: 100%;
+  height: 160px;
+  display: flex;
+}
+.cover{
+  height: 160px;
+  width: 160px;
+}
+.article{
+  padding: 0px 10px;
+  width: 200px;
+  height: 160px;
+  overflow: hidden;
+}
+.title{
+  font-size: 22px;
+  color: aqua;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.content{
+  padding: 0px 5px;
+  width: 100%;
+  height: 115px;
+  font-size: 13px;
+  display: -webkit-box;
+  -webkit-line-clamp: 7; /* 显示三行 */
+  -webkit-box-orient: vertical;
+  line-height: 1.5; /* 根据需要调整行高 */
+  text-overflow: ellipsis;
+  
+
+}
